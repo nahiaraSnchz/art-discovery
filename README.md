@@ -12,11 +12,12 @@
 ## 🎨 Características
 * **Análisis cromático:** Extracción de colores dominantes a partir de colecciones pictóricas.
 * **Líneas temporales de color:** Visualización de la evolución en el uso de pigmentos a lo largo de la historia del arte.
-* **Mecánica interactiva:** Modo juego donde el usuario debe deducir el autor o periodo basándose en franjas cromáticas.
+* **Mecánica interactiva:** Modo juego donde el usuario debe deducir el autor, movimiento o periodo basándose en franjas cromáticas.
+* **Explicación contextual:** Presentación de la evolución cromática y de su posible relación con el contexto artístico e histórico.
 
 ## 🛠️ Stack Tecnológico
-* **Frontend:** [React / TypeScript / Vite 
-* **Procesamiento de color:** [ColorThief / scikit-learn / Canvas API]
+* **Frontend:** React / TypeScript / Vite
+* **Procesamiento de color:** ColorThief / scikit-learn / Canvas API
 * **Fuente de datos:** APIs de dominio público ([The Met API](https://metmuseum.github.io/), Rijksmuseum, Wikidata)
 
 ## 📁 Estructura del Repositorio
@@ -28,6 +29,10 @@
 │   ├── data/            # JSONs con metadatos y paletas preprocesadas
 │   ├── hooks/           # Lógica y estado del juego
 │   └── utils/           # Algoritmos de extracción y comparación cromática
+├── docs/                # Documentación del proyecto y requisitos
 ├── .gitignore
 ├── package.json
 └── README.md
+```
+
+La documentación detallada y el alcance preliminar están disponibles en [`docs/`](docs/).
