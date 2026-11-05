@@ -30,8 +30,7 @@ Esta documentación recoge el ciclo de análisis, diseño e implementación para
 
 ### Organización del documento
 
-1. **[Introducción y Alcance](/requisitos/introduccion):** Objetivos del sistema y delimitación del problema.
-2. **[Stakeholders y Usuarios](/requisitos/stakeholders):** Actores involucrados y público objetivo.
-3. **[Requisitos Funcionales](/requisitos/funcionales):** Comportamiento y capacidades de la aplicación.
-4. **[Requisitos No Funcionales](/requisitos/no-funcionales):** Rendimiento, accesibilidad cromática y compatibilidad.
-5. **[Historias de Usuario](/requisitos/historias-usuario):** Casos prácticos y criterios de aceptación medibles.
+1. **[Introducción y Alcance](/requisitos/01-introduccion):** Objetivos del sistema y delimitación del problema.
+2. **[Stakeholders y Usuarios](/requisitos/02-stakeholders):** Actores involucrados y público objetivo.
+3. **[Requisitos Funcionales](/requisitos/03-funcionales):** Comportamiento y capacidades de la aplicación.
+4. **[Requisitos No Funcionales](/requisitos/04-no-funcionales):** Rendimiento, accesibilidad cromática y compatibilidad.
