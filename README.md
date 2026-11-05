@@ -5,7 +5,7 @@
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=nahiaraSnchz_art-discovery&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=nahiaraSnchz_art-discovery)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=nahiaraSnchz_art-discovery&metric=coverage)](https://sonarcloud.io/summary/new_code?id=nahiaraSnchz_art-discovery)
 
-> Proyecto para la asignatura de **Informática Audiovisual**. Herramienta interactiva para adivinar obras, periodos temporales y corrientes artísticas mediante el análisis cromático y la evolución temporal de sus paletas.
+> Herramienta interactiva para adivinar obras, periodos temporales y corrientes artísticas mediante el análisis cromático y la evolución temporal de sus paletas.
 
 ---
 
