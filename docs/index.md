@@ -24,10 +24,6 @@ features:
     details: Pipeline de integración continua (CI) en GitHub Actions, pruebas automatizadas y análisis estático con SonarQube Cloud.
 ---
 
-## 📌 Contexto Académico
-
-Esta documentación recoge el ciclo de análisis, diseño e implementación para la asignatura **Informática Audiovisual** (Grado en Ingeniería Informática del Software, Escuela de Ingeniería Informática – Universidad de Oviedo).
-
 ### Organización del documento
 
 1. **[Introducción y Alcance](/requisitos/01-introduccion):** Objetivos del sistema y delimitación del problema.
