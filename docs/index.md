@@ -14,7 +14,7 @@ hero:
       link: https://github.com/nahiaraSnchz/art-discovery
 
 features:
-  - title: 🎯 Propósito del Sistema 
+  - title: 🎯 Propósito del Sistema
     details: Plataforma didáctica orientada a deducir artistas, épocas o movimientos mediante líneas temporales de paletas cromáticas dominantes.
   - title: 📐 Ingeniería de Requisitos
     details: Especificación detallada de casos de uso, requisitos funcionales (RF), no funcionales (RNF) y perfiles de usuario.
