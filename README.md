@@ -10,7 +10,7 @@
 * **Mecánica interactiva:** Modo juego donde el usuario debe deducir el autor o periodo basándose en franjas cromáticas.
 
 ## 🛠️ Stack Tecnológico
-* **Frontend:** [React / TypeScript / Vite / Tailwind CSS / HTML5 Canvas] *(ajustar a tu stack)*
+* **Frontend:** [React / TypeScript / Vite 
 * **Procesamiento de color:** [ColorThief / scikit-learn / Canvas API]
 * **Fuente de datos:** APIs de dominio público ([The Met API](https://metmuseum.github.io/), Rijksmuseum, Wikidata)
 
