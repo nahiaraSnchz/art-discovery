@@ -1,75 +1,28 @@
-# React + TypeScript + Vite
+# Art Discovery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Proyecto para la asignatura de **Informática Audiovisual**. Herramienta interactiva para adivinar obras, periodos temporales y corrientes artísticas mediante el análisis cromático y la evolución temporal de sus paletas.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🎨 Características
+* **Análisis cromático:** Extracción de colores dominantes a partir de colecciones pictóricas.
+* **Líneas temporales de color:** Visualización de la evolución en el uso de pigmentos a lo largo de la historia del arte.
+* **Mecánica interactiva:** Modo juego donde el usuario debe deducir el autor o periodo basándose en franjas cromáticas.
 
-## React Compiler
+## 🛠️ Stack Tecnológico
+* **Frontend:** [React / TypeScript / Vite / Tailwind CSS / HTML5 Canvas] *(ajustar a tu stack)*
+* **Procesamiento de color:** [ColorThief / scikit-learn / Canvas API]
+* **Fuente de datos:** APIs de dominio público ([The Met API](https://metmuseum.github.io/), Rijksmuseum, Wikidata)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+## 📁 Estructura del Repositorio
+```text
+├── public/              # Assets estáticos
+├── src/
+│   ├── assets/          # Iconos y estilos globales
+│   ├── components/      # Componentes UI (Timeline, ColorBar, Card)
+│   ├── data/            # JSONs con metadatos y paletas preprocesadas
+│   ├── hooks/           # Lógica y estado del juego
+│   └── utils/           # Algoritmos de extracción y comparación cromática
+├── .gitignore
+├── package.json
+└── README.md
