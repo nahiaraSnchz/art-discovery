@@ -31,5 +31,12 @@
     "typescript-eslint": "^8.72.1",
     "vite": "^8.3.6",
     "vitepress": "^1.6.4"
+  },
+  "overrides": {
+    "@docsearch/react": {
+      "react": "$react",
+      "react-dom": "$react-dom",
+      "@types/react": "$@types/react"
+    }
   }
 }
