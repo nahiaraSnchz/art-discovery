@@ -54,6 +54,20 @@ function buildImageUrl(imageId: string | null): string | null {
 }
 
 /**
+ * Transforma un elemento de la API de Chicago a la entidad Artwork de nuestro dominio.
+ */
+function mapToArtwork(item: ArticItem): Artwork {
+  return {
+    id: item.id,
+    title: item.title ?? 'Obra sin título',
+    artist: item.artist_title ?? 'Artista desconocido',
+    date: item.date_display ?? 'Fecha no disponible',
+    medium: item.medium_display ?? 'Técnica no especificada',
+    imageUrl: buildImageUrl(item.image_id),
+  };
+}
+
+/**
  * Obtiene un listado paginado de obras de arte.
  *
  * @param page - Número de página actual (por defecto 1).
@@ -91,4 +105,25 @@ export async function fetchArtworks(page = 1, limit = 12): Promise<Artwork[]> {
     medium: item.medium_display ?? 'Técnica no especificada',
     imageUrl: buildImageUrl(item.image_id),
   }));
+}
+
+/**
+ *
+ * Busca obras por término de texto (título, artista o palabras clave).
+ *
+ * @param query - Texto introducido por el usuario.
+ * @param page - Número de página de resultados.
+ * @param limit - Cantidad de resultados por página.
+ */
+export async function searchArtworks(query: string, page = 1, limit = 12): Promise<Artwork[]> {
+  const encodedQuery = encodeURIComponent(query.trim());
+  const url = `${BASE_URL}/search?q=${encodedQuery}&page=${page}&limit=${limit}&fields=id,title,artist_title,date_display,medium_display,image_id`;
+
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`Error al buscar obras: ${response.status} ${response.statusText}`);
+  }
+
+  const payload: ArticApiResponse = await response.json();
+  return payload.data.map(mapToArtwork);
 }
