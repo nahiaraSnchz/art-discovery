@@ -17,6 +17,8 @@ export default function App() {
   const [loading, setLoading] = useState<boolean>(true);
   // Mensaje de error en caso de que la petición HTTP falle
   const [error, setError] = useState<string | null>(null);
+  // Estado para la pagina actual
+  const [page, setPage] = useState<number>(1);
 
   /**
    * Hook de efecto (useEffect):
@@ -24,10 +26,13 @@ export default function App() {
    * cuando el componente se monta en el navegador por primera vez (fase de montaje).
    */
   useEffect(() => {
-    fetchArtworks()
+    setLoading(true);
+    fetchArtworks(page, 12)
       .then((data) => {
         // Petición exitosa: guardamos los datos en el estado
         setArtworks(data);
+        // scroll suave hacia arriba al cambiar de pagina
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       })
       .catch((err: Error) => {
         // En caso de error, guardamos el mensaje en el estado
@@ -37,7 +42,7 @@ export default function App() {
         // Se ejecuta siempre (tanto en éxito como en fallo) para apagar el spinner/loader
         setLoading(false);
       });
-  }, []);
+  }, [page]); // se vuelve a ejecutar cada vez que cambia page
 
   return (
     <main className="app-container">
@@ -56,11 +61,35 @@ export default function App() {
 
       {/* Estado C: Éxito (solo renderiza la lista si no hay carga ni error) */}
       {!loading && !error && (
-        <section className="art-grid" aria-label="Catálogo de obras">
-          {artworks.map((art) => (
-            <ArtworkCard key={art.id} artwork={art} />
-          ))}
-        </section>
+        <>
+          <section className="art-grid" aria-label="Catálogo de obras">
+            {artworks.map((art) => (
+              <ArtworkCard key={art.id} artwork={art} />
+            ))}
+          </section>
+
+          {/* Barra de paginación */}
+          <nav className="pagination" aria-label="Navegación de páginas">
+            <button
+              type="button"
+              className="pagination__button"
+              disabled={page === 1}
+              onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
+            >
+              Anterior
+            </button>
+
+            <span className="pagination__current">Página {page}</span>
+
+            <button
+              type="button"
+              className="pagination__button"
+              onClick={() => setPage((prev) => prev + 1)}
+            >
+              Siguiente
+            </button>
+          </nav>
+        </>
       )}
     </main>
   );
