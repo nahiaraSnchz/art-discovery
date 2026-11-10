@@ -1,122 +1,138 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+/**
+ * @file App.tsx
+ * @description Componente raíz / vista principal de la galería Art Discovery.
+ */
 
-function App() {
-  const [count, setCount] = useState(0)
+import { useEffect, useState } from 'react';
+import type { Artwork } from '@/types/artwork';
+import { fetchArtworks, searchArtworks } from '@/services/artService';
+import { ArtworkCard } from '@/components/ArtworkCard';
+import { SearchBar } from '@/components/SearchBar';
+import { useDebounce } from '@/hooks/useDebounce';
+import './App.css';
+
+export default function App() {
+  // Estados de la vista:
+  // Lista de obras recuperadas del backend
+  const [artworks, setArtworks] = useState<Artwork[]>([]);
+  // Indicador de carga para mostrar retroalimentación al usuario
+  const [loading, setLoading] = useState<boolean>(true);
+  // Mensaje de error en caso de que la petición HTTP falle
+  const [error, setError] = useState<string | null>(null);
+  // Estados de navegación y filtrado
+  const [searchTerm, setSearchTerm] = useState<string>('');
+  const [page, setPage] = useState<number>(1);
+
+  // Retrasa la ejecución de la petición para no saturar la API al escribir
+  const debouncedQuery = useDebounce(searchTerm, 450);
+
+  // Control de estado previo para ajustar loading durante renderizado sin provocar renders en cascada
+  const [prevQuery, setPrevQuery] = useState<string>(debouncedQuery);
+  const [prevPage, setPrevPage] = useState<number>(page);
+
+  if (debouncedQuery !== prevQuery || page !== prevPage) {
+    setPrevQuery(debouncedQuery);
+    setPrevPage(page);
+    setLoading(true);
+    setError(null);
+  }
+
+  // Resetea a la primera página cuando el usuario modifica el texto de búsqueda
+  const handleSearchChange = (value: string) => {
+    setSearchTerm(value);
+    setPage(1);
+  };
+
+  /**
+   * Hook de efecto (useEffect):
+   * Al pasarle un array de dependencias vacío ([]), se ejecuta exactamente una vez
+   * cuando el componente se monta en el navegador por primera vez (fase de montaje).
+   */
+  useEffect(() => {
+    let isCancelled = false; // Bandera para evitar actualizar el estado si el componente se desmonta
+
+    // Si hay un termino de busqueda, se usa searchArtworks, si no, fetchArtworks
+    const request = debouncedQuery.trim()
+      ? searchArtworks(debouncedQuery, page, 12)
+      : fetchArtworks(page, 12);
+
+    request
+      .then((data) => {
+        if (!isCancelled) {
+          // Petición exitosa: guardamos los datos en el estado
+          setArtworks(data);
+          // scroll suave hacia arriba al cambiar de pagina
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      })
+      .catch((err: Error) => {
+        // En caso de error, guardamos el mensaje en el estado
+        setError(err.message);
+      })
+      .finally(() => {
+        // Se ejecuta siempre (tanto en éxito como en fallo) para apagar el spinner/loader
+        setLoading(false);
+      });
+    // Cleanup: cancela la actualización si cambian los parametros antes de resolver
+    return () => {
+      isCancelled = true;
+    };
+  }, [debouncedQuery, page]); // se vuelve a ejecutar cada vez que cambia page
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <main className="app-container">
+      <header className="app-header">
+        <h1 className="app-header__title">Art Discovery</h1>
+        <p className="app-header__subtitle">Explorador del patrimonio artístico</p>
+      </header>
 
-      <div className="ticks"></div>
+      {/* Componente de entrada de búsqueda */}
+      <SearchBar value={searchTerm} onChange={handleSearchChange} />
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      {/* Renderizado condicional según el estado de la máquina: */}
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+      {/* Estado A: Cargando */}
+      {loading && <div className="state-loading">Cargando catálogo artístico...</div>}
+
+      {/* Estado B: Error de comunicación */}
+      {error && <div className="state-error">{error}</div>}
+
+      {!loading && !error && artworks.length === 0 && (
+        <div className="state-loading">No se encontraron resultados para "{debouncedQuery}"</div>
+      )}
+
+      {/* Estado C: Éxito (solo renderiza la lista si no hay carga ni error) */}
+      {!loading && !error && (
+        <>
+          <section className="art-grid" aria-label="Catálogo de obras">
+            {artworks.map((art) => (
+              <ArtworkCard key={art.id} artwork={art} />
+            ))}
+          </section>
+
+          {/* Barra de paginación */}
+          <nav className="pagination" aria-label="Navegación de páginas">
+            <button
+              type="button"
+              className="pagination__button"
+              disabled={page === 1}
+              onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
+            >
+              Anterior
+            </button>
+
+            <span className="pagination__current">Página {page}</span>
+
+            <button
+              type="button"
+              className="pagination__button"
+              onClick={() => setPage((prev) => prev + 1)}
+            >
+              Siguiente
+            </button>
+          </nav>
+        </>
+      )}
+    </main>
+  );
 }
-
-export default App
