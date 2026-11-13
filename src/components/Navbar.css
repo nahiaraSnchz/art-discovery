@@ -1,0 +1,95 @@
+/**
+ * @file Navbar.css
+ * @description Estilos de la barra de navegación superior y selector de vistas (BEM).
+ */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: rgba(13, 15, 18, 0.88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.navbar__brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar__title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #f3f4f6;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.navbar__subtitle {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+/* Contenedor tipo píldora para los botones de cambio de vista */
+.navbar__nav {
+  display: flex;
+  align-items: center;
+  background-color: #16191f;
+  padding: 0.3rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 0.25rem;
+}
+
+.navbar__tab {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 7px;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.navbar__tab:hover {
+  color: #f3f4f6;
+}
+
+/* Modificador BEM para la pestaña seleccionada */
+.navbar__tab--active {
+  background-color: #242832;
+  color: #e5a962;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 640px) {
+  .navbar__container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navbar__nav {
+    justify-content: center;
+  }
+
+  .navbar__tab {
+    flex: 1;
+    text-align: center;
+  }
+}

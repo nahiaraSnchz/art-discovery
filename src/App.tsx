@@ -9,17 +9,19 @@ import { fetchArtworks, searchArtworks } from '@/services/artService';
 import { ArtworkCard } from '@/components/ArtworkCard';
 import { SearchBar } from '@/components/SearchBar';
 import { useDebounce } from '@/hooks/useDebounce';
+import { WorldMap } from '@/components/WorldMap';
+import { Navbar, type ViewMode } from '@/components/Navbar';
 import './App.css';
 
 export default function App() {
   // Estados de la vista:
-  // Lista de obras recuperadas del backend
+  // Estado que controla qué pantalla está viendo el usuario ('map' por defecto)
+  const [activeView, setActiveView] = useState<ViewMode>('map');
+  // Estados del catálogo
   const [artworks, setArtworks] = useState<Artwork[]>([]);
-  // Indicador de carga para mostrar retroalimentación al usuario
   const [loading, setLoading] = useState<boolean>(true);
-  // Mensaje de error en caso de que la petición HTTP falle
   const [error, setError] = useState<string | null>(null);
-  // Estados de navegación y filtrado
+  // Estados de búsqueda y paginación
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [page, setPage] = useState<number>(1);
 
@@ -44,14 +46,15 @@ export default function App() {
   };
 
   /**
-   * Hook de efecto (useEffect):
-   * Al pasarle un array de dependencias vacío ([]), se ejecuta exactamente una vez
-   * cuando el componente se monta en el navegador por primera vez (fase de montaje).
+   * Efecto de carga de obras:
+   * Solo dispara peticiones HTTP cuando el usuario entra en la vista 'catalog',
+   * evitando llamadas innecesarias mientras explora el mapa estático.
    */
   useEffect(() => {
-    let isCancelled = false; // Bandera para evitar actualizar el estado si el componente se desmonta
+    if (activeView !== 'catalog') return;
 
-    // Si hay un termino de busqueda, se usa searchArtworks, si no, fetchArtworks
+    let isCancelled = false;
+
     const request = debouncedQuery.trim()
       ? searchArtworks(debouncedQuery, page, 12)
       : fetchArtworks(page, 12);
@@ -59,80 +62,83 @@ export default function App() {
     request
       .then((data) => {
         if (!isCancelled) {
-          // Petición exitosa: guardamos los datos en el estado
           setArtworks(data);
-          // scroll suave hacia arriba al cambiar de pagina
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }
       })
       .catch((err: Error) => {
-        // En caso de error, guardamos el mensaje en el estado
-        setError(err.message);
+        if (!isCancelled) {
+          setError(err.message);
+        }
       })
       .finally(() => {
-        // Se ejecuta siempre (tanto en éxito como en fallo) para apagar el spinner/loader
-        setLoading(false);
+        if (!isCancelled) {
+          setLoading(false);
+        }
       });
-    // Cleanup: cancela la actualización si cambian los parametros antes de resolver
+
     return () => {
       isCancelled = true;
     };
-  }, [debouncedQuery, page]); // se vuelve a ejecutar cada vez que cambia page
+  }, [activeView, debouncedQuery, page]); // se vuelve a ejecutar cada vez que cambia page
 
   return (
-    <main className="app-container">
-      <header className="app-header">
-        <h1 className="app-header__title">Art Discovery</h1>
-        <p className="app-header__subtitle">Explorador del patrimonio artístico</p>
-      </header>
+    <>
+      {/* Barra de navegación superior persistente */}
+      <Navbar activeView={activeView} onSelectView={setActiveView} />
 
-      {/* Componente de entrada de búsqueda */}
-      <SearchBar value={searchTerm} onChange={handleSearchChange} />
+      <main className="app-container">
+        {/* Vista 1: Mapa Mundi */}
+        {activeView === 'map' && <WorldMap />}
 
-      {/* Renderizado condicional según el estado de la máquina: */}
+        {/* Vista 2: Catálogo de Obras */}
+        {activeView === 'catalog' && (
+          <>
+            <SearchBar value={searchTerm} onChange={handleSearchChange} />
 
-      {/* Estado A: Cargando */}
-      {loading && <div className="state-loading">Cargando catálogo artístico...</div>}
+            {loading && <div className="state-loading">Cargando obras...</div>}
+            {error && <div className="state-error">{error}</div>}
 
-      {/* Estado B: Error de comunicación */}
-      {error && <div className="state-error">{error}</div>}
+            {!loading && !error && artworks.length === 0 && (
+              <div className="state-loading">
+                No se encontraron obras para &ldquo;{debouncedQuery}&rdquo;. Prueba con otro
+                término.
+              </div>
+            )}
 
-      {!loading && !error && artworks.length === 0 && (
-        <div className="state-loading">No se encontraron resultados para "{debouncedQuery}"</div>
-      )}
+            {!loading && !error && artworks.length > 0 && (
+              <>
+                <section className="art-grid" aria-label="Catálogo de obras">
+                  {artworks.map((art) => (
+                    <ArtworkCard key={art.id} artwork={art} />
+                  ))}
+                </section>
 
-      {/* Estado C: Éxito (solo renderiza la lista si no hay carga ni error) */}
-      {!loading && !error && (
-        <>
-          <section className="art-grid" aria-label="Catálogo de obras">
-            {artworks.map((art) => (
-              <ArtworkCard key={art.id} artwork={art} />
-            ))}
-          </section>
+                <nav className="pagination" aria-label="Navegación de páginas">
+                  <button
+                    type="button"
+                    className="pagination__button"
+                    disabled={page === 1}
+                    onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
+                  >
+                    ← Anterior
+                  </button>
 
-          {/* Barra de paginación */}
-          <nav className="pagination" aria-label="Navegación de páginas">
-            <button
-              type="button"
-              className="pagination__button"
-              disabled={page === 1}
-              onClick={() => setPage((prev) => Math.max(prev - 1, 1))}
-            >
-              Anterior
-            </button>
+                  <span className="pagination__current">Página {page}</span>
 
-            <span className="pagination__current">Página {page}</span>
-
-            <button
-              type="button"
-              className="pagination__button"
-              onClick={() => setPage((prev) => prev + 1)}
-            >
-              Siguiente
-            </button>
-          </nav>
-        </>
-      )}
-    </main>
+                  <button
+                    type="button"
+                    className="pagination__button"
+                    onClick={() => setPage((prev) => prev + 1)}
+                  >
+                    Siguiente →
+                  </button>
+                </nav>
+              </>
+            )}
+          </>
+        )}
+      </main>
+    </>
   );
 }

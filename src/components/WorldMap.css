@@ -1,0 +1,22 @@
+/**
+ * @file WorldMap.css
+ * @description Estilos del contenedor del mapa mundi en p5.js.
+ */
+
+.world-map {
+  width: 100%;
+  margin-bottom: 3rem;
+  background-color: #0d0f12;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.world-map__canvas {
+  width: 100%;
+}
+
+/* Elimina el pequeño margen inferior que los navegadores añaden por defecto a <canvas> */
+.world-map__canvas canvas {
+  display: block;
+}
