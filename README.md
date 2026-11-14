@@ -56,6 +56,30 @@ npm install
 
 ---
 
+## Mapa Mundi Interactivo (Constelación de Obras)
+
+Visualización cartográfica desarrollada con **p5.js** (modo instancia) y **React + TypeScript** que representa obras artísticas como nodos luminosos agrupados en constelaciones regionales sobre una proyección equirectangular.
+
+### Características implementadas
+
+- **Constelaciones por región:** Clasificación cromática automática según coordenadas geográficas (Europa, América, Asia, África y Oceanía) conectando cada nodo con sus vecinos cercanos.
+- **Navegación fluida:** Soporte para zoom centrado en el cursor mediante la rueda del ratón (`1x` a `8x`), desplazamiento (_pan_) al arrastrar y restablecimiento de vista con doble clic.
+- **Vista previa enriquecida:** Tarjeta flotante HTML/CSS superpuesta al lienzo que muestra la miniatura de la obra (320 px desde Wikimedia Commons), título, autoría, ubicación y año.
+- **Capa de datos local:** Normalización de coordenadas WKT (`Point(lng lat)`) y distribución en espiral para evitar solapamientos en una misma ciudad a partir de `src/data/staticArtworks.json`.
+
+### Estructura relevante
+
+- `src/components/WorldMap.tsx`: Lienzo interactivo en `p5.js`, cámara (zoom/pan) y gestión de la tarjeta flotante.
+- `src/data/worldContinents.ts`: Siluetas vectoriales generalizadas de los continentes.
+- `src/data/mapArtworks.ts`: Parser de coordenadas WKT, filtrado de duplicados y generación de URLs de miniaturas.
+- `src/data/staticArtworks.json`: Conjunto de datos estático extraído de Wikidata Query Service.
+
+### Hoja de ruta
+
+- [x] **Fase 1:** Mapa mundi estático con constelaciones regionales, zoom/desplazamiento y vista previa con imagen.
+- [ ] **Fase 2:** Línea temporal interactiva con filtro por años y transición progresiva de monocromo a color.
+- [ ] **Fase 3:** Ficha detallada de obra al seleccionar un nodo y sincronización con el catálogo.
+
 ## 🏛️ Decisiones Técnicas y Arquitectura
 
 ### 1. Proxy Inverso para la API (Bypass de CORS y 403)
