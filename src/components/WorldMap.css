@@ -13,6 +13,11 @@
   overflow: hidden;
 }
 
+.world-map__controls {
+  padding: 1rem 1rem 0;
+  background-color: #0d0f12;
+}
+
 .world-map__canvas {
   width: 100%;
 }

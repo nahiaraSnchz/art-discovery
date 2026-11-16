@@ -4,10 +4,12 @@
  * @module components/WorldMap
  */
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import p5 from 'p5';
 import { CONTINENTS } from '@/data/worldContinents';
 import { STATIC_MAP_ARTWORKS, type MapArtwork } from '@/data/mapArtworks';
+import { YearRangeSlider } from '@/components/YearRangeSlider';
+import { isYearInRange, type YearBounds, type YearRange } from '@/utils/yearRange';
 import './WorldMap.css';
 
 interface RegionStyle {
@@ -39,16 +41,28 @@ const LEGEND_ITEMS: RegionStyle[] = [
   { name: 'Oceanía', rgb: [167, 139, 250] },
 ];
 
-export function WorldMap() {
+interface WorldMapProps {
+  yearRange: YearRange;
+  onYearRangeChange: (range: YearRange) => void;
+  yearBounds: YearBounds;
+}
+
+export function WorldMap({ yearRange, onYearRangeChange, yearBounds }: WorldMapProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const tooltipRef = useRef<HTMLDivElement>(null);
 
   const [hoveredArtwork, setHoveredArtwork] = useState<MapArtwork | null>(null);
   const [failedImageId, setFailedImageId] = useState<string | null>(null);
+  const filteredArtworks = useMemo(
+    () => STATIC_MAP_ARTWORKS.filter((artwork) => isYearInRange(artwork.year, yearRange)),
+    [yearRange]
+  );
 
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
+
+    setHoveredArtwork(null);
 
     // 1. Limpia cualquier <canvas> residual antes de iniciar
     container.replaceChildren();
@@ -194,7 +208,7 @@ export function WorldMap() {
         drawGrid();
         drawContinents();
 
-        const projected = STATIC_MAP_ARTWORKS.map((art) => ({
+        const projected = filteredArtworks.map((art) => ({
           art,
           region: getRegionStyle(art.lat, art.lng),
           ...project(art.lat, art.lng),
@@ -325,12 +339,20 @@ export function WorldMap() {
       p5Instance.remove();
       container.replaceChildren();
     };
-  }, []);
+  }, [filteredArtworks]);
 
   const showImage = Boolean(hoveredArtwork?.image && failedImageId !== hoveredArtwork.id);
 
   return (
     <section className="world-map" aria-label="Mapa mundi de obras artísticas">
+      <div className="world-map__controls">
+        <YearRangeSlider
+          bounds={yearBounds}
+          value={yearRange}
+          onChange={onYearRangeChange}
+          idPrefix="map-year"
+        />
+      </div>
       <div ref={containerRef} className="world-map__canvas" />
 
       <aside
