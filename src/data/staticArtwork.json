@@ -1,0 +1,533 @@
+[
+  {
+    "artwork": "http://www.wikidata.org/entity/Q2269788",
+    "artworkLabel": "Retrato del doctor Félix Rey",
+    "artistLabel": "Vincent van Gogh",
+    "year": "1889",
+    "placeLabel": "Zundert",
+    "coords": "Point(4.66 51.4703)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Portrait%20of%20Doctor%20F%C3%A9lix%20Rey%20%28F500%29.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q12958201",
+    "artworkLabel": "Whisperings of Love",
+    "artistLabel": "William-Adolphe Bouguereau",
+    "year": "1889",
+    "placeLabel": "La Rochela",
+    "coords": "Point(-1.151388888 46.159444444)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/William-Adolphe%20Bouguereau%20%281825-1905%29%20-%20Whisperings%20of%20Love%20%281889%29.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q4110588",
+    "artworkLabel": "The Vision to the Youth Bartholomew",
+    "artistLabel": "Mijaíl Nésterov",
+    "year": "1889",
+    "placeLabel": "Ufá",
+    "coords": "Point(55.9475 54.726111111)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mikhail%20Nesterov%20001.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q19363211",
+    "artworkLabel": "Autorretrato con la oreja vendada y caballete",
+    "artistLabel": "Vincent van Gogh",
+    "year": "1889",
+    "placeLabel": "Zundert",
+    "coords": "Point(4.66 51.4703)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Self-Portrait%20with%20a%20Bandaged%20Ear%20-%20Vincent%20van%20Gogh.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q3766163",
+    "artworkLabel": "Mujer joven empolvándose",
+    "artistLabel": "Georges Seurat",
+    "year": "1889",
+    "placeLabel": "antiguo V distrito de París",
+    "coords": "Point(2.357461 48.87197)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Young%20Woman%20Powdering%20Herself%20Georges%20Seurat.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q262360",
+    "artworkLabel": "Campo de trigo con una alondra",
+    "artistLabel": "Vincent van Gogh",
+    "year": "1887",
+    "placeLabel": "Zundert",
+    "coords": "Point(4.66 51.4703)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Getreidefeld%20mit%20Mohnblumen%20und%20Lerche.jpeg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q3713925",
+    "artworkLabel": "Niña con abanico",
+    "artistLabel": "Pierre-Auguste Renoir",
+    "year": "1885",
+    "placeLabel": "Limoges",
+    "coords": "Point(1.261666666 45.834444444)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Pierre-Auguste%20Renoir%20035.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q22329831",
+    "artworkLabel": "Autorretrato sin barba",
+    "artistLabel": "Vincent van Gogh",
+    "year": "1889",
+    "placeLabel": "Zundert",
+    "coords": "Point(4.66 51.4703)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20Willem%20van%20Gogh%20102.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q13528770",
+    "artworkLabel": "Retrato de Père Tanguy",
+    "artistLabel": "Vincent van Gogh",
+    "year": "1887",
+    "placeLabel": "Zundert",
+    "coords": "Point(4.66 51.4703)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Portrait%20of%20Pere%20Tanguy%201887-8.JPG"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q5914606",
+    "artworkLabel": "Maison devant la Sainte-Victoire près de Gardanne (House in Provence)",
+    "artistLabel": "Paul Cézanne",
+    "year": "1885",
+    "placeLabel": "Aix-en-Provence",
+    "coords": "Point(5.445555555 43.527777777)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Maison%20devant%20la%20Sainte-Victoire%20pr%C3%A8s%20de%20Gardanne%2C%20par%20Paul%20C%C3%A9zanne%2C%20Indianapolis%20Museum%20of%20Art.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q3824633",
+    "artworkLabel": "La toilette",
+    "artistLabel": "Henri de Toulouse-Lautrec",
+    "year": "1889",
+    "placeLabel": "Albi",
+    "coords": "Point(2.145833333 43.928055555)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/%28Albi%29%20Rousse%20%28La%20Toilette%29%20-%201889%20-%20Henri%20de%20Toulouse-Lautrec%20-%20Mus%C3%A9e%20d%27Orsay%2C%20Paris.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q7401211",
+    "artworkLabel": "Santa Eulalia",
+    "artistLabel": "John William Waterhouse",
+    "year": "1885",
+    "placeLabel": "Roma",
+    "coords": "Point(12.482777777 41.893055555)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/John%20William%20Waterhouse%20-%20Saint%20Eulalia%20-%201885.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q154469",
+    "artworkLabel": "Los comedores de patatas",
+    "artistLabel": "Vincent van Gogh",
+    "year": "1885",
+    "placeLabel": "Zundert",
+    "coords": "Point(4.66 51.4703)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/De%20aardappeleters%20-%20s0005V1962%20-%20Van%20Gogh%20Museum.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q4095553",
+    "artworkLabel": "La boyarda Morózova",
+    "artistLabel": "Vasili Súrikov",
+    "year": "1887",
+    "placeLabel": "Krasnoyarsk",
+    "coords": "Point(92.871944444 56.008888888)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vasily%20Surikov%20-%20%D0%91%D0%BE%D1%8F%D1%80%D1%8B%D0%BD%D1%8F%20%D0%9C%D0%BE%D1%80%D0%BE%D0%B7%D0%BE%D0%B2%D0%B0%20-%20Google%20Art%20Project.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q4156438",
+    "artworkLabel": "Muchacha con los melocotones (Retrato de V.S. Mamontova)",
+    "artistLabel": "Valentín Serov",
+    "year": "1887",
+    "placeLabel": "San Petersburgo",
+    "coords": "Point(30.316666666 59.95)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Valentin%20Serov%20-%20%D0%94%D0%B5%D0%B2%D0%BE%D1%87%D0%BA%D0%B0%20%D1%81%20%D0%BF%D0%B5%D1%80%D1%81%D0%B8%D0%BA%D0%B0%D0%BC%D0%B8.%20%D0%9F%D0%BE%D1%80%D1%82%D1%80%D0%B5%D1%82%20%D0%92.%D0%A1.%D0%9C%D0%B0%D0%BC%D0%BE%D0%BD%D1%82%D0%BE%D0%B2%D0%BE%D0%B9%20-%20Google%20Art%20Project.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q512971",
+    "artworkLabel": "La Pastora",
+    "artistLabel": "William-Adolphe Bouguereau",
+    "year": "1889",
+    "placeLabel": "La Rochela",
+    "coords": "Point(-1.151388888 46.159444444)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/William-Adolphe%20Bouguereau%20-%20The%20Little%20Shepherdess%20-%20Google%20Art%20Project.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q4659236",
+    "artworkLabel": "A Road at Saint-Remy with Female Figure",
+    "artistLabel": "Vincent van Gogh",
+    "year": "1889",
+    "placeLabel": "Zundert",
+    "coords": "Point(4.66 51.4703)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Weg%20in%20Saint-R%C3%A9my%20mit%20weiblicher%20Figur.jpeg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q766212",
+    "artworkLabel": "Swimming Hole",
+    "artistLabel": "Thomas Eakins",
+    "year": "1885",
+    "placeLabel": "Filadelfia",
+    "coords": "Point(-75.163611111 39.952777777)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Thomas%20Eakins%20-%20Swimming%20%281895%29.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q5015669",
+    "artworkLabel": "Love's Messenger",
+    "artistLabel": "Marie Spartali Stillman",
+    "year": "1885",
+    "placeLabel": "Londres",
+    "coords": "Point(-0.1275 51.507222222)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Loves%20Messenger%20Stillman%20DAM.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q3794118",
+    "artworkLabel": "El jardinero",
+    "artistLabel": "Vincent van Gogh",
+    "year": "1889",
+    "placeLabel": "Zundert",
+    "coords": "Point(4.66 51.4703)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Il%20giardiniere%20%28Vincent%20Van%20Gogh%29.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q2811576",
+    "artworkLabel": "La clínica de Agnew",
+    "artistLabel": "Thomas Eakins",
+    "year": "1889",
+    "placeLabel": "Filadelfia",
+    "coords": "Point(-75.163611111 39.952777777)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Eakins%2C%20Thomas%20-%20The%20Agnew%20Clinic.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q7142987",
+    "artworkLabel": "Pasteur's portrait by Edelfelt",
+    "artistLabel": "Albert Edelfelt",
+    "year": "1885",
+    "placeLabel": "Kiala manor",
+    "coords": "Point(25.61694444 60.40805556)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Portrait%20de%20Louis%20Pasteur%20Albert%20Edelfelt.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q1560719",
+    "artworkLabel": "Clavel, lirio, lirio, rosa",
+    "artistLabel": "ジョン・シンガー・サージェント",
+    "year": "1885",
+    "placeLabel": "Florencia",
+    "coords": "Point(11.254166666 43.771388888)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/John%20Singer%20Sargent%20-%20Carnation%2C%20Lily%2C%20Lily%2C%20Rose%20-%20Google%20Art%20Project.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q19833792",
+    "artworkLabel": "Congregation Leaving the Reformed Church in Nuenen",
+    "artistLabel": "Vincent van Gogh",
+    "year": "1885",
+    "placeLabel": "Zundert",
+    "coords": "Point(4.66 51.4703)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Het%20uitgaan%20van%20de%20Hervormde%20Kerk%20te%20Nuenen%20-%20s0003V1962%20-%20Van%20Gogh%20Museum.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q4658180",
+    "artworkLabel": "A Meadow in the Mountains: Le Mas de Saint-Paul",
+    "artistLabel": "Vincent van Gogh",
+    "year": "1889",
+    "placeLabel": "Zundert",
+    "coords": "Point(4.66 51.4703)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/A%20Meadow%20in%20the%20Mountains%20-%20Le%20Mas%20de%20Saint-Paul.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q500951",
+    "artworkLabel": "El Cristo amarillo",
+    "artistLabel": "Paul Gauguin",
+    "year": "1889",
+    "placeLabel": "París",
+    "coords": "Point(2.352222222 48.856666666)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Paul%20Gauguin%20-%20The%20Yellow%20Christ%20%28Le%20Christ%20jaune%29%201889.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q2269047",
+    "artworkLabel": "La italiana",
+    "artistLabel": "Vincent van Gogh",
+    "year": "1887",
+    "placeLabel": "Zundert",
+    "coords": "Point(4.66 51.4703)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20The%20Italian%20Woman%20-%20Google%20Art%20Project.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q11821612",
+    "artworkLabel": "Rain",
+    "artistLabel": "Vincent van Gogh",
+    "year": "1889",
+    "placeLabel": "Zundert",
+    "coords": "Point(4.66 51.4703)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Weizenfeld%20im%20Regen.jpeg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q11821612",
+    "artworkLabel": "Rain",
+    "artistLabel": "Vincent van Gogh",
+    "year": "1889",
+    "placeLabel": "Zundert",
+    "coords": "Point(4.66 51.4703)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20Willem%20van%20Gogh%2C%20Dutch%20-%20Rain%20-%20Google%20Art%20Project.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q4110565",
+    "artworkLabel": "View from Theo’s apartment",
+    "artistLabel": "Vincent van Gogh",
+    "year": "1887",
+    "placeLabel": "Zundert",
+    "coords": "Point(4.66 51.4703)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20View%20from%20Theo%E2%80%99s%20apartment%20-%20Google%20Art%20Project.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q2873059",
+    "artworkLabel": "Alrededor del piano",
+    "artistLabel": "Henri Fantin-Latour",
+    "year": "1885",
+    "placeLabel": "Grenoble",
+    "coords": "Point(5.726388888 45.186944444)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Henri%20fantin-latour%2C%20attorno%20al%20piano%2C%201885%20-%20frameless.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q2666439",
+    "artworkLabel": "Mañana en un bosque de pinos",
+    "artistLabel": "Konstantín Savitski",
+    "year": "1889",
+    "placeLabel": "Taganrog",
+    "coords": "Point(38.9 47.233333333)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shishkin%2C%20Ivan%20-%20Morning%20in%20a%20Pine%20Forest.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q4896868",
+    "artworkLabel": "La bella Angèle",
+    "artistLabel": "Paul Gauguin",
+    "year": "1889",
+    "placeLabel": "París",
+    "coords": "Point(2.352222222 48.856666666)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Gauguin%20-%20La%20Belle%20Ang%C3%A8le%20%281889%29.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q4118041",
+    "artworkLabel": "Flores de amapola",
+    "artistLabel": "Vincent van Gogh",
+    "year": "1887",
+    "placeLabel": "Zundert",
+    "coords": "Point(4.66 51.4703)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Vase%20mit%20Pechnelken.jpeg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q19356352",
+    "artworkLabel": "Dos cangrejos",
+    "artistLabel": "Vincent van Gogh",
+    "year": "1889",
+    "placeLabel": "Zundert",
+    "coords": "Point(4.66 51.4703)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20Two%20Crabs%20%281889%29.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q3344537",
+    "artworkLabel": "La joven pastora",
+    "artistLabel": "William-Adolphe Bouguereau",
+    "year": "1885",
+    "placeLabel": "La Rochela",
+    "coords": "Point(-1.151388888 46.159444444)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20young%20shepherdess%2C%20by%20William-Adolphe%20Bouguereau.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q3821251",
+    "artworkLabel": "La torre Eiffel",
+    "artistLabel": "Georges Seurat",
+    "year": "1889",
+    "placeLabel": "antiguo V distrito de París",
+    "coords": "Point(2.357461 48.87197)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Georges%20Seurat%20-%20La%20Tour%20Eiffel%20%28ca.%201889%29.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q2504917",
+    "artworkLabel": "El Cristo verde",
+    "artistLabel": "Paul Gauguin",
+    "year": "1889",
+    "placeLabel": "París",
+    "coords": "Point(2.352222222 48.856666666)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Paul%20Gauguin%20-%20The%20Green%20Christ%20%281889%29.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q19363214",
+    "artworkLabel": "Autorretrato con la oreja vendada",
+    "artistLabel": "Vincent van Gogh",
+    "year": "1889",
+    "placeLabel": "Zundert",
+    "coords": "Point(4.66 51.4703)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Selbstbildnis%20mit%20verbundenem%20Ohr%20und%20Pfeife.jpeg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q17511613",
+    "artworkLabel": "Un cangrejo de espaldas",
+    "artistLabel": "Vincent van Gogh",
+    "year": "1887",
+    "placeLabel": "Zundert",
+    "coords": "Point(4.66 51.4703)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Crustacean%2C%20lying%20on%20his%20back%20by%20Vincent%20van%20Gogh%20%28Van%20Gogh%20museum%20photograph%29.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q1118295",
+    "artworkLabel": "Silla con pipa",
+    "artistLabel": "Vincent van Gogh",
+    "year": "1889",
+    "placeLabel": "Zundert",
+    "coords": "Point(4.66 51.4703)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20Willem%20van%20Gogh%20138.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q18748731",
+    "artworkLabel": "Inger en la playa",
+    "artistLabel": "Edvard Munch",
+    "year": "1889",
+    "placeLabel": "Ådalsbruk",
+    "coords": "Point(11.308204 60.79314)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Edvard%20Munch%20-%20Summer%20Night.%20Inger%20on%20the%20Beach%20%281889%29.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q45585",
+    "artworkLabel": "La noche estrellada",
+    "artistLabel": "Vincent van Gogh",
+    "year": "1889",
+    "placeLabel": "Zundert",
+    "coords": "Point(4.66 51.4703)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Van%20Gogh%20-%20Starry%20Night%20-%20Google%20Art%20Project.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q17429571",
+    "artworkLabel": "La lavandera (Toulouse Lautrec)",
+    "artistLabel": "Henri de Toulouse-Lautrec",
+    "year": "1889",
+    "placeLabel": "Albi",
+    "coords": "Point(2.145833333 43.928055555)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Toulouse-Lautrec%20-%20La%20Blanchisseuse.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q19861886",
+    "artworkLabel": "La gran piscina de Bursa",
+    "artistLabel": "Jean-Léon Gérôme",
+    "year": "1885",
+    "placeLabel": "Vesoul",
+    "coords": "Point(6.155277777 47.622222222)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/La%20grande%20piscine%20de%20brousse.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q3835761",
+    "artworkLabel": "Le Chahut",
+    "artistLabel": "Georges Seurat",
+    "year": "1889",
+    "placeLabel": "antiguo V distrito de París",
+    "coords": "Point(2.357461 48.87197)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Georges%20Seurat%2C%201889-90%2C%20Le%20Chahut%2C%20Kr%C3%B6ller-M%C3%BCller%20Museum.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q3823444",
+    "artworkLabel": "La parada del circo",
+    "artistLabel": "Georges Seurat",
+    "year": "1887",
+    "placeLabel": "antiguo V distrito de París",
+    "coords": "Point(2.357461 48.87197)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Georges%20Seurat%20066.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q2270805",
+    "artworkLabel": "The Boy in the Red Vest",
+    "artistLabel": "Paul Cézanne",
+    "year": "1889",
+    "placeLabel": "Aix-en-Provence",
+    "coords": "Point(5.445555555 43.527777777)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Paul%20C%C3%A9zanne%20-%20Le%20Gar%C3%A7on%20au%20gilet%20rouge%20-%20B%C3%BChrle.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q2980775",
+    "artworkLabel": "Cleopatra probando venenos en condenados a muerte",
+    "artistLabel": "Alexandre Cabanel",
+    "year": "1887",
+    "placeLabel": "Montpellier",
+    "coords": "Point(3.877230555 43.610919444)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Cleopatra%2C%20Alexandre%20Cabanel%2C%201887%2C%20Koninklijk%20Museum%20voor%20Schone%20Kunsten%20Antwerpen%2C%201505.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q2278818",
+    "artworkLabel": "Agostina Segatori sentada en el Café du Tambourin",
+    "artistLabel": "Vincent van Gogh",
+    "year": "1887",
+    "placeLabel": "Zundert",
+    "coords": "Point(4.66 51.4703)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Vincent%20van%20Gogh%20-%20In%20the%20caf%C3%A9%20-%20Agostina%20Segatori%20in%20Le%20Tambourin%20-%20Google%20Art%20Project%202.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q39926338",
+    "artworkLabel": "Lilith",
+    "artistLabel": "John Collier",
+    "year": "1887",
+    "placeLabel": "Londres",
+    "coords": "Point(-0.1275 51.507222222)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Lilith%2C%20par%20John%20Collier.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q19833793",
+    "artworkLabel": "Kingfisher by the Waterside",
+    "artistLabel": "Vincent van Gogh",
+    "year": "1887",
+    "placeLabel": "Zundert",
+    "coords": "Point(4.66 51.4703)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/IJsvogel%20aan%20de%20waterkant%20-%20s0100V1962%20-%20Van%20Gogh%20Museum.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q2666439",
+    "artworkLabel": "Mañana en un bosque de pinos",
+    "artistLabel": "Iván Shishkin",
+    "year": "1889",
+    "placeLabel": "Yelábuga",
+    "coords": "Point(52.033333333 55.766666666)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Shishkin%2C%20Ivan%20-%20Morning%20in%20a%20Pine%20Forest.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q6903108",
+    "artworkLabel": "Mont Sainte-Victoire with Large Pine",
+    "artistLabel": "Paul Cézanne",
+    "year": "1887",
+    "placeLabel": "Aix-en-Provence",
+    "coords": "Point(5.445555555 43.527777777)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Mont%20Sainte-Victoire%20with%20Large%20Pine%2C%20by%20Paul%20C%C3%A9zanne.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q4660884",
+    "artworkLabel": "A break away!",
+    "artistLabel": "Tom Roberts",
+    "year": "1891",
+    "placeLabel": "Dorchester",
+    "coords": "Point(-2.439722222 50.710833333)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tom%20Roberts%20-%20A%20break%20away%21%20-%20Google%20Art%20Project.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q4848311",
+    "artworkLabel": "Bailed Up",
+    "artistLabel": "Tom Roberts",
+    "year": "1895",
+    "placeLabel": "Dorchester",
+    "coords": "Point(-2.439722222 50.710833333)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Bailed%20Up.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q4950181",
+    "artworkLabel": "Bourke Street",
+    "artistLabel": "Tom Roberts",
+    "year": "1886",
+    "placeLabel": "Dorchester",
+    "coords": "Point(-2.439722222 50.710833333)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tom%20Roberts-Allegro%20con%20brio%2C%20Bourke%20Street%20west%20c%201885-86.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q5151949",
+    "artworkLabel": "Coming South",
+    "artistLabel": "Tom Roberts",
+    "year": "1886",
+    "placeLabel": "Dorchester",
+    "coords": "Point(-2.439722222 50.710833333)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tom%20Roberts%20-%20Coming%20South%20-%20Google%20Art%20Project.jpg"
+  },
+  {
+    "artwork": "http://www.wikidata.org/entity/Q7492201",
+    "artworkLabel": "Shearing the Rams",
+    "artistLabel": "Tom Roberts",
+    "year": "1890",
+    "placeLabel": "Dorchester",
+    "coords": "Point(-2.439722222 50.710833333)",
+    "image": "http://commons.wikimedia.org/wiki/Special:FilePath/Tom%20Roberts%20-%20Shearing%20the%20rams%20-%20Google%20Art%20Project.jpg"
+  }
+]
