@@ -9,6 +9,8 @@ import type { Artwork } from '../types/artwork';
 // Ruta relativa que intercepta el proxy configurado en Vite (vite.config.ts).
 // En local, Vite redirige esto a https://api.artic.edu sin exponer cabeceras que causen CORS.
 const BASE_URL = '/api-artic/api/v1/artworks';
+const GAY_QUERY_ARTWORK_ID = 151186;
+const ARTWORK_FIELDS = 'id,title,artist_title,date_display,medium_display,image_id';
 
 /**
  * Tipado de la respuesta cruda de la API del museo.
@@ -25,6 +27,10 @@ interface ArticItem {
 
 interface ArticApiResponse {
   data: ArticItem[];
+}
+
+interface ArticArtworkResponse {
+  data: ArticItem;
 }
 
 /**
@@ -116,8 +122,18 @@ export async function fetchArtworks(page = 1, limit = 12): Promise<Artwork[]> {
  * @param limit - Cantidad de resultados por página.
  */
 export async function searchArtworks(query: string, page = 1, limit = 12): Promise<Artwork[]> {
+  if (query.trim().toLowerCase() === 'gay') {
+    const response = await fetch(`${BASE_URL}/${GAY_QUERY_ARTWORK_ID}?fields=${ARTWORK_FIELDS}`);
+    if (!response.ok) {
+      throw new Error(`Error al buscar obra destacada: ${response.status} ${response.statusText}`);
+    }
+
+    const payload: ArticArtworkResponse = await response.json();
+    return [mapToArtwork(payload.data)];
+  }
+
   const encodedQuery = encodeURIComponent(query.trim());
-  const url = `${BASE_URL}/search?q=${encodedQuery}&page=${page}&limit=${limit}&fields=id,title,artist_title,date_display,medium_display,image_id`;
+  const url = `${BASE_URL}/search?q=${encodedQuery}&page=${page}&limit=${limit}&fields=${ARTWORK_FIELDS}`;
 
   const response = await fetch(url);
   if (!response.ok) {

@@ -27,6 +27,7 @@ export default function App() {
 
   // Retrasa la ejecución de la petición para no saturar la API al escribir
   const debouncedQuery = useDebounce(searchTerm, 450);
+  const isGaySearch = debouncedQuery.trim().toLowerCase() === 'gay';
 
   // Control de estado previo para ajustar loading durante renderizado sin provocar renders en cascada
   const [prevQuery, setPrevQuery] = useState<string>(debouncedQuery);
@@ -108,6 +109,10 @@ export default function App() {
 
             {!loading && !error && artworks.length > 0 && (
               <>
+                {isGaySearch && (
+                  <div className="pride-flag" role="img" aria-label="Bandera del orgullo gay" />
+                )}
+
                 <section className="art-grid" aria-label="Catálogo de obras">
                   {artworks.map((art) => (
                     <ArtworkCard key={art.id} artwork={art} />
